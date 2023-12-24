@@ -1,18 +1,145 @@
-/* * {
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* page reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} */
-.logo-text{
-    display: flex;
 }
-/* .main-header *{
-    display: flex;
-} */
+body{
+    margin: 0 2rem;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    background-color: #eee;
+}
+/* nav-bar positioning */
+.nav-bar{
+    position: fixed;
+    width: 100%;
+    right: 0;
+    padding: 0.8rem 1.9rem;
+}
 .nav-bar,
-nav-bar ul{
-    display: flex;
-}
 .nav-bar ul{
+    background-color: #111;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    
 }
+/* color decleration and rm decor */
+.nav-bar li,a{
+    color: #eee;
+    list-style: none;
+    text-decoration: none;
+}
+.main-nav a{
+    color: #a5a5a5;
+    font-size: 0.8rem;
+    gap: 10px;
+    margin: 1.5rem;
+}
+.nav-bar a:hover{
+    color: #edd2cb;
+    transition: 0.3s ease-in;
+}
+/* adjust icon size */
+.nav-socials{
+    font-size: 25px;
+    gap: 25px !important;
+}
+ /* welcome section */
+
+ .welcome{
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background : url('/img /bg-image.jpg');
+    background-size: cover;
+    text-align: center;
+    margin-bottom: 3rem;
+ }
+
+ .welcome h1{
+    font-size: 5rem;
+ }
+ .welcome p{
+    font-size: 1.5rem;
+    color: #f55951;
+ }
+ .skills-p{
+    font-size: 1.5rem;
+    color: #f1e8e6;
+    margin-bottom: 2rem;
+ }
+ .skills-p > span{
+    color: #a5a5a5;
+ }
+ .btn {
+    color: #eee;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background-color: #f73d33;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 3px;
+ }
+ .btn:hover{
+    background-color: rgba(245, 89, 81, 0.9);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+ }
+
+ /* About me Section */
+
+ #about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ #about h1{
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+ }
+ #about h5{
+    font-size: 1.5rem;
+    color: #f55951;
+    margin-bottom: 1rem;
+ }
+#about p{
+    width: 60%;
+    margin-bottom: 1.5rem;
+ }
+ /* asides in about including skills and profile */
+ .aside-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+ }
+ .profile a {
+    color: #111;
+ }
+ /* aside btns */
+ .btn-hire{
+    background: transparent;
+    border: 2px solid black;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem;
+    width: 15rem;
+    color: #111;
+ }
+ .btn-cv{
+    background-color: #111;
+    color: #eee;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 15rem;
+    border: 2px solid black;
+ }

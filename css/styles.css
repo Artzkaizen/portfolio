@@ -12,7 +12,6 @@ body{
     font-family: 'Poppins', Helvetica, sans-serif;
     background-color: #eee;
 }
-
 /*  general font styles */
 h5{
     font-size: 1.5rem;
@@ -224,7 +223,7 @@ h5{
     width: 60%;
     margin-bottom: 1.5rem;
 }
- .project-containter{
+ .project-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
@@ -239,7 +238,7 @@ h5{
     animation-range: entry -100px;
 }
 
-/* sercvies section */
+/* services section */
 
 #services{
     display: flex;
@@ -258,9 +257,9 @@ h5{
 }
 .services-container{
     display: grid;
-    
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    width: 80%
 }
 .srv-box{
     display: flex;
@@ -284,9 +283,11 @@ h5{
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    z-index: 5;
 }
 #contact p{
     width: 60%;
+
 }
 .contact-form{
     display: flex;
@@ -305,6 +306,9 @@ input{
     outline: none;
     border: none;
     border-bottom: 1px solid black;
+}
+input::placeholder{
+    font-family: 'Poppins', Helvetica, sans-serif;
 }
 #message{
     min-width: 40vw;
@@ -326,47 +330,43 @@ input{
     border: none;
     border-radius: 3px;
 }
-
-/* animations */
-
-.sld-right{
-    opacity: 0;
-    transform: translateX(+100%);
-    transition: all 1s;
+/* scroll to top btn */
+.btn-scroll{
+    background-color: #f73d33;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 4vw;
+    height: 6vh;
+    border: none;
 }
-.hidden{
-    opacity: 0;
-    transform: translateY(+100%);
-    transition: all 1s;
+.btn-scroll-icon{
+    font-size: 20px;
+    color: #eee;
 }
-.show{
-    opacity: 1;
-    transform: translateX(0);
-    transform: translateY(0); 
+.btn-scroll:hover{
+    background-color: rgba(247, 61, 51, 0.5);
+    transition: 0.3s ease-in-out;
 }
 
-.sld-btm{
-    opacity: 1;
-    transform: translateY(-100%);
-    transition: all 1s;
+/* footer section */
+footer{
+    margin-bottom: 2rem;
 }
-.sld-left{
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: all 1s;
-} 
-
- /* @keyframes slide-right {
-    to{
-        transform: translateX(0);
-    }
- }
-
- @keyframes slide-up {
-    from{
-        transform: translateY(+100%);
-    }
-    to{
-        transform: translateY(0);
-    }
- } */
+.footer-socials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* height: 20vh; */
+    padding: 1rem;
+    gap: 8vw;
+}
+.footer-socials h6{
+    font-size: 1rem;
+    margin: 1rem;
+}
+.footer-icons{
+    font-size: 30px;
+    margin: 1rem;
+}

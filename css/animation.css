@@ -1,0 +1,44 @@
+
+/* animations */
+
+.sld-right{
+    opacity: 0;
+    transform: translateX(+100%);
+    transition: all 1s;
+}
+.hidden{
+    opacity: 0;
+    transform: translateY(+100%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    transform: translateX(0);
+    transform: translateY(0); 
+}
+
+.sld-btm{
+    opacity: 1;
+    transform: translateY(-100%);
+    transition: all 1s;
+}
+.sld-left{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s;
+} 
+
+ /* @keyframes slide-right {
+    to{
+        transform: translateX(0);
+    }
+ }
+
+ @keyframes slide-up {
+    from{
+        transform: translateY(+100%);
+    }
+    to{
+        transform: translateY(0);
+    }
+ } */

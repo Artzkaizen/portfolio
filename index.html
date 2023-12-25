@@ -12,6 +12,9 @@
 
     <!-- icons -->
     <script src="https://kit.fontawesome.com/51a64f5986.js" crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script defer src="app.js"></script>
 </head>
 <body>
     <header class="main-header">
@@ -19,15 +22,14 @@
         <nav class="nav-bar">
 
             <div class="logo">
-                <h1 class="logo-text">
                     <a class="home-logo" href="">NATIVE</a>
-                </h1>
             </div>
 
             <ul class="main-nav">
                 <li><a href="#">HOME</a></li>
                 <li><a href="#about">ABOUT ME</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#services">SERVICES</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
 
@@ -41,17 +43,16 @@
     <main>
         <!-- Welcome section -->
         <section class="welcome">
-            <p>Hello World,</p>
-            <h1>I'm Chukwuka Ezerioha</h1>
+            <p >Hello World,</p>
+            <h1 >I'm Chukwuka Ezerioha</h1>
             <span class="skills-p"> Front-end Developer <span>|</span> UI/UX Designer</span>
             <button class="btn"><a href="#about">MORE ABOUT ME</a></button>
         </section>
         <!-- About me section -->
         <section id="about">
-            <h5>About Me</h5>
-            <h1>Let me introduce myself</h1>
-                <p>Lorem ipsum Exercitation culpa qui dolor consequat exercitation fugiat laborum ex ea eiusmod ad do aliqua occaecat nisi ad irure sunt id pariatur Duis laboris amet exercitation veniam labore consectetur ea id quis eiusmod.</p>
-            </div>
+                <h5>About Me</h5>
+                <h1>Let me introduce myself</h1>
+                    <p>Lorem ipsum Exercitation culpa qui dolor consequat exercitation fugiat laborum ex ea eiusmod ad do aliqua occaecat nisi ad irure sunt id pariatur Duis laboris amet exercitation veniam labore consectetur ea id quis eiusmod.</p>
             <aside class="aside-box">
                 <div class="profile">
                     <h3>Profile</h3>
@@ -68,7 +69,6 @@
 
                     <h4>EMAIL:</h4>
                     <p>arbeitchuka@gmail.com</p>
-                    <button class="btn-hire"><a href="#">HIRE ME</a></button>
                 </div>
 
                 <div class="tech-skills">
@@ -76,23 +76,80 @@
                     <p>Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut esse in magna sint minim officia consectetur nisi commodo ea magna pariatur nisi cillum.</p>
 
                     <h4>HTML5</h4>
-                    <p>Chukwuka Jefferson Ezerioha</p>
+                    <div class="progress-bar"></div>
 
                     <h4>CSS3</h4>
-                    <p>Freelancer, Front-end Developer</p>
+                    <div class="progress-bar"></div>
+
+                    <h4>JAVASCRIPT</h4>
+                    <div class="progress-bar"></div>
 
                     <h4>REACT</h4>
-                    <p>google.com</p>
+                    <div class="progress-bar"></div>
                     
                     <h4>C</h4>
-                    <p>arbeitchuka@gmail.com</p>
-                    <button class="btn-cv"><a href="#">DOWNLOAD CV</a></button>
+                    <div class="progress-bar"></div>                    
                 </div>
             </aside>
+            <div class="btn-cta">
+                <a href="#"><button class="btn-hire">HIRE ME</button></a>
+                <button class="btn-cv"><a href="#">DOWNLOAD CV</a></button>
+
+            </div>
         </section>
         <!-- section for personal projects -->
         <section id="projects">
+            <h5>PORTFOLIO</h5>
+            <h1>Check out some of my work</h1>
+                <p>Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
+            </div>
+            <div class="project-containter">
+                <div class="project-box hidden"></div>
+                <div class="project-box "></div>
+                <div class="project-box "></div>
+                <div class="project-box sld-right"></div>
+                <div class="project-box hidden"></div>
+                <div class="project-box "></div>
+            </div>    
+        </section>
 
+        <!-- services section -->
+        <section id="services" >
+            <h5 class="hidden">SERVICES</h5>
+            <h1 class="hidden">What Can I Do For You?</h1>
+            <p class="hidden" >Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do</p>
+            <div class="services-container hidden">
+                <div class="srv-box">
+                    <div class="srv-box-icon"></div>
+                    <h4>Web design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quibusdam soluta dolores. Amet voluptas inventore rerum consectetur eos veniam perferendis animi odio eligendi? Dolor ipsa, similique repellat quaerat dignissimos asperiores.</p>
+                </div>
+
+                <div class="srv-box hidden">
+                    <div class="srv-box-icon"></div>
+                    <h4>Web Development</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quibusdam soluta dolores. Amet voluptas inventore rerum consectetur eos veniam perferendis animi odio eligendi? Dolor ipsa, similique repellat quaerat dignissimos asperiores.</p>
+                </div>
+
+                <div class="srv-box hidden">
+                    <div class="srv-box-icon"></div>
+                    <h4>UI/UX</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quibusdam soluta dolores. Amet voluptas inventore rerum consectetur eos veniam perferendis animi odio eligendi? Dolor ipsa, similique repellat quaerat dignissimos asperiores.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h5>CONTACT</h5>
+            <h1>I'd Love To Hear From You</h1>
+            <p>Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do. </p>
+
+                <form class="contact-form" action="" method="get">
+                    <input id="name" name="name" type="text" placeholder="Name" required>
+                    <input id="email"  name="email" type="email" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                    <input id="subject" name="email" type="text" placeholder="Subject" required>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="type your message here..."></textarea>
+                    <button class="btn-submit">Submit</button>
+                </form>
         </section>
     </main>
 </body>

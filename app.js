@@ -31,3 +31,29 @@ toggleButton.addEventListener('click', () => {
     navBarLinks.classList.toggle('active');
     hamburgerMenu.classList.toggle('active');
 });
+
+// smooth scroll animation
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('a');
+    
+
+    // Add click event listener to each navigation link
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        // Prevent the default behavior of anchor links
+          event.preventDefault();
+        
+          // Removes 'active' class
+          navBarLinks.classList.remove('active');
+          hamburgerMenu.classList.remove('active');
+          
+        // Scroll to the target section using smooth scrolling
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  });

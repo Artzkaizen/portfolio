@@ -28,6 +28,17 @@
     transition: all 1s;
 } 
 
+/* hamburger animation */
+
+.hm-menu:nth-child(2){
+    opacity: 0;
+
+}
+.hm-menu:active{
+    transform: rotate(180deg);
+}
+
+
  /* @keyframes slide-right {
     to{
         transform: translateX(0);

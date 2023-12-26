@@ -60,13 +60,13 @@ h5{
     width: 100%;
     background-color: #eee;
 }
+
 .nav-bar,
 .nav-bar ul{
     background-color: #111;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 15px;
     
 }
 /* color decleration and rm decor */
@@ -341,6 +341,9 @@ input{
 input::placeholder{
     font-family: 'Poppins', Helvetica, sans-serif;
 }
+input:active{
+   border-bottom: 1px solid var(--primary-btn);
+}
 #message{
    
     min-width: 40vw;
@@ -403,144 +406,161 @@ input::placeholder{
     margin: 1rem;
 }
 
-/* reponsive styles */
+/* responsive styles */
 @media screen and (max-width: 600px) {
     /* Styles for phones in portrait mode */
-    body{
+   body{
         margin: 0;
-    }
-    .nav-bar{
-        /* height: 60vh; */
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 0.8rem;
+   }
+    /* navigation */
+   .nav-bar{
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 0.8rem;
     }
     .nav-bar ul{
-        width: 100%;;
+      display: none;
+      transform: translateY(-100%);
+      width: 100%;
     }
-    .nav-bar li{
-        width: 100%;
-        border-bottom: 2px solid #222;
+    .nav-bar li{ 
+      width: 100%;
+      border-bottom: 2px solid #222;
+    }
+    .nav-bar li:nth-child(5){
+      border: none;
     }
     .toggle-menu{
         display: flex;
     }
     .main-nav{
-        flex-direction: column;
-        /* border-top: 2px solid grey; */
-        /* opacity: 0; */
-    }
-    .li{
-      display: none;
+      /* position: absolute; */
+      flex-direction: column;
+      /* transform: translateY(-100%); */
     }
     .li.active
     {
       display: flex;
+      transform: translateX(0);
+      transition: all 1s;
+      top: 0; 
     }
-    .nav-socials li{
-        display: none !important;
-    }
-    .main-nav a{
-        width: 100%;
-        font-size: 1.2rem;
-        margin: 2rem 0;
-    }
-
-    h1{
-        font-size: 1.5rem;
-     }
-    .welcome  h1{
-        font-size: 3rem;
-     }
-     /* about section */
-     #about p{
-        width: 100%;
-     }
-     .about-intro{
-       padding: 0 2rem;
-     }
-     .aside-box {
-        width: 100vw;
-        padding: 2rem;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-     }
-     .aside-box h3{
-        font-size: 1.3rem;
-        margin: 1rem;
-        text-align: center;
-     }
-     .aside-box div{
-        margin: 1rem;
-     }
-     /* aside btns */
-     .btn-cta{
-        flex-wrap: wrap;
-        gap: 1rem;
-     }
-     .progress-bar{
-        width: 80vw;
-        height: 1vh;
-     }
-     /* progress bars */
-     .progress-bar::before{
-        content: "";
-        position: absolute;
-        background-color: #111;
-        width: 76vw;
-        height: 1vh;
-     }
-     .progress-bar:nth-of-type(3)::before{
-        position: absolute;
-        width: 72vw;
-     }
-     .progress-bar:nth-of-type(4)::before{
-        position: absolute;
-        width: 40vw;
-     }
-     .progress-bar:nth-of-type(5)::before{
-        position: absolute;
-        width: 60vw;
-     }
-     /* projects */
-     .project-container{
-        grid-template-columns: repeat(1, 1fr);
-     }
-     .project-box{
-        width: 80vw;
-        height: 50vh;
-     }
-     /* contact section */
-     input,
-     #message{
-        width: 70vw;
-     }
-     .btn-submit{
-        width: 70vw;
-     }
-     .btn-submit{
-        font-size: 1rem;
-     }
-     /* footer */
-     .footer-socials{
-        display: block;
-        width: 100vw;
-        height: 60vh;
-     }
-     /* service */
-     .services-container,
-     .srv-box{
-        width: 100vw;
-        display: none;
-     }
-     .srv-box:nth-child(2),
-     .srv-box:nth-child(3){
-        opacity: 0;
-     }
-     .srv-box-icon{
-        width: 16vw;
-        height: 8vh;
-     }
+   .toggle-menu.active .hm-menu:nth-child(2){
+      opacity: 0;
+   }
+   .toggle-menu.active .hm-menu:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+      transition: transform 0.3s ease-in-out;
+   }
+   .toggle-menu.active .hm-menu:nth-child(3){
+      transform: translateY(-10px) rotate(-45deg);
+      transition: transform 0.3s ease-in-out;
+   }
+   .main-nav a{
+   display: block;
+   text-align: center;
+   width: 100%;
+   font-size: 1.2rem;
+   margin: 1rem 0;
+   }
+   h1{
+      font-size: 1.5rem;
+   }
+   .welcome  h1{
+      font-size: 3rem;
+   }
+   .skills-p{
+      font-size: 1rem;
+   }
+   /* about section */
+   #about p{
+      width: 100%;
+   }
+   .about-intro{
+      padding: 0 2rem;
+   }
+   .aside-box {
+      width: 100vw;
+      padding: 2rem;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+   }
+   .aside-box h3{
+      font-size: 1.3rem;
+      margin: 1rem;
+      text-align: center;
+   }
+   .aside-box div{
+      margin: 1rem;
+   }
+   /* aside btns */
+   .btn-cta{
+      flex-wrap: wrap;
+      gap: 1rem;
+   }
+   .progress-bar{
+      width: 80vw;
+      height: 1vh;
+   }
+   /* progress bars */
+   .progress-bar::before{
+      content: "";
+      position: absolute;
+      background-color: #111;
+      width: 76vw;
+      height: 1vh;
+   }
+   .progress-bar:nth-of-type(3)::before{
+      position: absolute;
+      width: 72vw;
+   }
+   .progress-bar:nth-of-type(4)::before{
+      position: absolute;
+      width: 40vw;
+   }
+   .progress-bar:nth-of-type(5)::before{
+      position: absolute;
+      width: 60vw;
+   }
+   /* projects */
+   .project-container{
+      grid-template-columns: repeat(1, 1fr);
+   }
+   .project-box{
+      width: 80vw;
+      height: 50vh;
+   }
+   /* contact section */
+   input,
+   #message{
+      width: 70vw;
+   }
+   .btn-submit{
+      width: 70vw;
+   }
+   .btn-submit{
+      font-size: 1rem;
+   }
+   /* footer */
+   .footer-socials{
+      display: block;
+      width: 100vw;
+      height: 60vh;
+   }
+   /* service */
+   .services-container,
+   .srv-box{
+      width: 100vw;
+      display: none;
+   }
+   .srv-box:nth-child(2),
+   .srv-box:nth-child(3){
+      opacity: 0;
+   }
+   .srv-box-icon{
+      width: 16vw;
+      height: 8vh;
+   }
 }

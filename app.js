@@ -24,8 +24,10 @@ slideFromBottom.forEach((el) =>  observer.observe(el));
 
 const toggleButton = document.getElementsByClassName('toggle-menu')[0];
 const navBarLinks = document.getElementsByClassName('li')[0];
+const hamburgerMenu = document.getElementsByClassName('toggle')[0];
 
 toggleButton.addEventListener('click', () => {
-    navBarLinks.classList.toggle('active')
-    console.log("sucess")
+    console.log("success");
+    navBarLinks.classList.toggle('active');
+    hamburgerMenu.classList.toggle('active');
 });

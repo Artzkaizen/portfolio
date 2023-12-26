@@ -409,7 +409,6 @@ input::placeholder{
     /* Styles for phones in portrait mode */
     body{
         margin: 0;
-        overflow: hidden;
     }
     .nav-bar{
         /* height: 60vh; */

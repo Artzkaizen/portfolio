@@ -19,3 +19,13 @@ hiddenElements.forEach((el) =>  observer.observe(el));
 slideFromLeft.forEach((el) => observer.observe(el));
 slideFromRight.forEach((el) =>  observer.observe(el));
 slideFromBottom.forEach((el) =>  observer.observe(el));
+
+// hamburger menu toggle listener
+
+const toggleButton = document.getElementsByClassName('toggle-menu')[0];
+const navBarLinks = document.getElementsByClassName('li')[0];
+
+toggleButton.addEventListener('click', () => {
+    navBarLinks.classList.toggle('active')
+    console.log("sucess")
+});

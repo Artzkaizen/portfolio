@@ -1,6 +1,14 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* variables */
+:root{
+    --secondary-text-color: #f55951;
+    --primary-btn: #f73d33;
+}
 
+.li{ 
+   display: none ;
+}
 /* page reset */
 * {
     margin: 0;
@@ -11,13 +19,13 @@ body{
     margin: 0 2rem;
     max-width: 100vw;
     overflow-x: hidden;
-    font-family: 'Poppins', Helvetica, sans-serif;
+    font-family: 'Poppins', Helvetica sans-serif;
     background-color: #eee;
 }
 /*  general font styles */
 h5{
     font-size: 1.5rem;
-    color: #f55951;
+    color: var(--secondary-text-color);
     margin-bottom: 1rem;
  }
  h1{
@@ -28,7 +36,6 @@ h5{
     font-size: 1.5rem;
     font-weight: 700;
  }
-
 /* nav-bar positioning */
 .nav-bar{
     position: fixed;
@@ -36,6 +43,22 @@ h5{
     right: 0;
     padding: 0.8rem 1.9rem;
     z-index: 5;
+}
+.toggle-menu{ 
+    position: fixed;
+    top: 1.5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    z-index: 5;
+}
+.hm-menu{
+    height: 3px;
+    width: 100%;
+    background-color: #eee;
 }
 .nav-bar,
 .nav-bar ul{
@@ -93,7 +116,7 @@ h5{
  }
  .welcome p{
     font-size: 1.5rem;
-    color: #f55951;
+    color: var(--secondary-text-color);
     animation: slide-right linear forwards;
     animation-timeline: view();
  }
@@ -109,7 +132,7 @@ h5{
     color: #eee;
     font-size: 0.8rem;
     font-weight: 700;
-    background-color: #f73d33;
+    background-color: var(--primary-btn);
     padding: 1.2rem;
     border: none;
     border-radius: 3px;
@@ -130,13 +153,19 @@ h5{
     margin-bottom: 5rem;
  }
  #about h1{
-    font-size: 3rem;
     margin-bottom: 1.5rem;
  }
 
 #about p{
     width: 60%;
     margin-bottom: 1.5rem;
+ }
+ #about a{
+    color: #333;
+ }
+ #about a:hover{
+    color: var(--primary-btn);
+    transition: 0.3s ease-in;
  }
  /* asides in about including skills and profile */
  .aside-box{
@@ -150,7 +179,7 @@ h5{
     color: #111;
  }
  .btn-cv a{
-    color: #eee;
+    color: #eee !important;
  }
  /* aside btns */
  .btn-cta{
@@ -177,8 +206,8 @@ h5{
     border: 2px solid black;
  }
 .btn-hire:hover{
-    border-color: #f73d33;
-    color: #f73d33;
+    border-color: var(--primary-btn);
+    color: var(--primary-btn);
     transition: 0.3s ease-in-out;
  }
  .btn-cv:hover{
@@ -189,10 +218,10 @@ h5{
  /* progress bar */
 
  .progress-bar{
-    background-color: #f73d33;
+    background-color: var(--primary-btn);
     width: 25vw;
     height: 1vh;
-    margin: 1rem 0;
+    margin: 1rem 0 !important;
  }
  .progress-bar::before{
     content: "";
@@ -255,6 +284,7 @@ h5{
     margin-bottom: 1.5rem;
 }
 #services h4{
+    font-size: 1.5rem;
     margin-bottom: 1rem ;
 }
 .services-container{
@@ -271,15 +301,14 @@ h5{
     text-align: center;
 }
 .srv-box-icon{
-    background-color: #111;
-    width: 10vw;
-    height: 18vh;
-    border-radius: 50%;
+    font-size: 50px;
     margin: 1rem 0;
 }
 /* contact section */
 
 #contact{
+    background-color: #444;
+    color: #eee;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -298,8 +327,8 @@ h5{
     flex-direction: column;
 }
 input{
-    background-color: #eee;
-    color: #111;
+    background-color: #444;
+    color: #eee;
     max-width: 100%;
     width: 40vw;
     height: 5vh;
@@ -307,7 +336,7 @@ input{
     padding: 0.5rem;
     outline: none;
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #eee;
 }
 input::placeholder{
     font-family: 'Poppins', Helvetica, sans-serif;
@@ -319,11 +348,11 @@ input::placeholder{
     margin: 1rem;
     padding: 0.5rem;
     outline: none;
-    border: 1px solid black;
+    border: 1px solid #eee;
     border-radius: 3px;
 }
 .btn-submit{
-    background-color: #f73d33;
+    background-color: var(--primary-btn);
     color: #eee;
     width: 40vw;
     height: 5vh;
@@ -334,7 +363,7 @@ input::placeholder{
 }
 /* scroll to top btn */
 .btn-scroll{
-    background-color: #f73d33;
+    background-color: var(--primary-btn);
     position: fixed;
     right: 0;
     bottom: 0;
@@ -352,15 +381,17 @@ input::placeholder{
 }
 
 /* footer section */
-footer{
-    margin-bottom: 2rem;
-}
+/* footer{
+    padding-bottom: 2rem;
+} */
 .footer-socials{
+    background-color: #444;
+    color: #eee;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* height: 20vh; */
+    height: 30vh;
     padding: 1rem;
     gap: 8vw;
 }
@@ -371,4 +402,147 @@ footer{
 .footer-icons{
     font-size: 30px;
     margin: 1rem;
+}
+
+/* reponsive styles */
+@media screen and (max-width: 600px) {
+    /* Styles for phones in portrait mode */
+    body{
+        margin: 0;
+        overflow: hidden;
+    }
+    .nav-bar{
+        /* height: 60vh; */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0.8rem;
+    }
+    .nav-bar ul{
+        width: 100%;;
+    }
+    .nav-bar li{
+        width: 100%;
+        border-bottom: 2px solid #222;
+    }
+    .toggle-menu{
+        display: flex;
+    }
+    .main-nav{
+        flex-direction: column;
+        /* border-top: 2px solid grey; */
+        /* opacity: 0; */
+    }
+    .li{
+      display: none;
+    }
+    .li.active
+    {
+      display: flex;
+    }
+    .nav-socials li{
+        display: none !important;
+    }
+    .main-nav a{
+        width: 100%;
+        font-size: 1.2rem;
+        margin: 2rem 0;
+    }
+
+    h1{
+        font-size: 1.5rem;
+     }
+    .welcome  h1{
+        font-size: 3rem;
+     }
+     /* about section */
+     #about p{
+        width: 100%;
+     }
+     .about-intro{
+       padding: 0 2rem;
+     }
+     .aside-box {
+        width: 100vw;
+        padding: 2rem;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+     }
+     .aside-box h3{
+        font-size: 1.3rem;
+        margin: 1rem;
+        text-align: center;
+     }
+     .aside-box div{
+        margin: 1rem;
+     }
+     /* aside btns */
+     .btn-cta{
+        flex-wrap: wrap;
+        gap: 1rem;
+     }
+     .progress-bar{
+        width: 80vw;
+        height: 1vh;
+     }
+     /* progress bars */
+     .progress-bar::before{
+        content: "";
+        position: absolute;
+        background-color: #111;
+        width: 76vw;
+        height: 1vh;
+     }
+     .progress-bar:nth-of-type(3)::before{
+        position: absolute;
+        width: 72vw;
+     }
+     .progress-bar:nth-of-type(4)::before{
+        position: absolute;
+        width: 40vw;
+     }
+     .progress-bar:nth-of-type(5)::before{
+        position: absolute;
+        width: 60vw;
+     }
+     /* projects */
+     .project-container{
+        grid-template-columns: repeat(1, 1fr);
+     }
+     .project-box{
+        width: 80vw;
+        height: 50vh;
+     }
+     /* contact section */
+     input,
+     #message{
+        width: 70vw;
+     }
+     .btn-submit{
+        width: 70vw;
+     }
+     .btn-submit{
+        font-size: 1rem;
+     }
+     /* footer */
+     .footer-socials{
+        display: block;
+        width: 100vw;
+        height: 60vh;
+     }
+     /* service */
+     .services-container,
+     .srv-box{
+        width: 100vw;
+        display: none;
+     }
+     .srv-box:nth-child(2),
+     .srv-box:nth-child(3){
+        opacity: 0;
+     }
+     .srv-box-icon{
+        width: 16vw;
+        height: 8vh;
+     }
 }

@@ -10,15 +10,7 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 const hiddenElements = document.querySelectorAll('.hidden');
-const slideFromRight = document.querySelectorAll('.sld-right');
-const slideFromLeft = document.querySelectorAll('.sld-left');
-const slideFromBottom = document.querySelectorAll('.sld-btm');
-
-
 hiddenElements.forEach((el) =>  observer.observe(el));
-slideFromLeft.forEach((el) => observer.observe(el));
-slideFromRight.forEach((el) =>  observer.observe(el));
-slideFromBottom.forEach((el) =>  observer.observe(el));
 
 // hamburger menu toggle listener
 
@@ -36,7 +28,6 @@ toggleButton.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('a');
     
-
     // Add click event listener to each navigation link
     navLinks.forEach(function (link) {
       link.addEventListener('click', function (event) {

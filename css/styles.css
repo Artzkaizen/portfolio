@@ -22,21 +22,20 @@ body{
    background-color: #eee;
    scroll-snap-type: y mandatory;
    overflow-y: scroll;
-   z-index: 1;
 }
 section{
    padding-top: 5rem;
    scroll-snap-align: start;
 }
 /*  general font styles */
+h1{
+   font-size: 3rem;
+   margin-bottom: 1.5rem;
+}
 h5{
    font-size: 1.5rem;
    color: var(--secondary-text-color);
    margin-bottom: 1rem;
-}
-h1{
-   font-size: 3rem;
-   margin-bottom: 1.5rem;
 }
 .home-logo{
    font-size: 1.5rem;
@@ -158,12 +157,15 @@ h1{
    align-items: center;
    margin-bottom: 5rem;
 }
+.about-text{
+   width: 60%;
+   text-align: center;
+}
 #about h1{
    margin-bottom: 1.5rem;
 }
 
 #about p{
-   width: 60%;
    margin-bottom: 1.5rem;
 }
 #about a{
@@ -174,12 +176,12 @@ h1{
    transition: 0.3s ease-in;
 }
 /* asides in about including skills and profile */
-.aside-box{
-   display: flex;
-   justify-content: center;
-   align-items: center;
+.aside-container{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
    width: 50%;
-   margin: 1rem;
+   gap: 20px;
+   margin: 0 auto;
 }
 .btn-hire a {
    color: #111;
@@ -193,6 +195,7 @@ h1{
    justify-content: center;
    align-items: center;
    gap: 4rem;
+   margin-top: 2rem;
    color: #111;
 }
 .btn-hire{
@@ -250,15 +253,17 @@ h1{
 }
 
 /* projects */
-
 #projects{
    display: flex;
    align-items: center;
    flex-direction: column;
 }
 #projects p{
-   width: 60%;
    margin-bottom: 1.5rem;
+}
+.project-text{
+   text-align: center;
+   width: 60%;
 }
 .project-container{
    display: grid;
@@ -286,12 +291,15 @@ h1{
    margin: 3rem 0;
 }
 #services p{
-   width: 60%;
    margin-bottom: 1.5rem;
 }
 #services h4{
    font-size: 1.5rem;
    margin-bottom: 1rem ;
+}
+.services-text{
+   text-align: center;
+   width: 60%;
 }
 .services-container{
    display: grid;
@@ -311,20 +319,18 @@ h1{
    margin: 1rem 0;
 }
 /* contact section */
-
 #contact{
    background-color: #111;
    color: #eee;
    display: flex;
+   text-align: center;
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   height: 100vh;
    z-index: 5;
 }
-#contact p{
-   width: 60%;
-
+.contact-container{
+   margin: 2rem;
 }
 .contact-form{
    display: flex;
@@ -396,14 +402,14 @@ border-bottom: 1px solid var(--primary-btn);
 
 .footer-socials{
    background-color: #111;
-    color: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 30vh;
-    padding: 1rem;
-    gap: 8vw;
+   color: #eee;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 1rem;
+   gap: 8vw;
+
 }
 .footer-socials h6{
     font-size: 1rem;
@@ -415,9 +421,13 @@ border-bottom: 1px solid var(--primary-btn);
 }
 
 /* responsive styles */
-@media screen and (max-width: 600px) {
-    /* Styles for phones in portrait mode */
 
+/* global media query  */
+@media screen and (max-width: 768px) {
+    /* Styles for phones in portrait mode */
+   /* section{
+      padding: 0 2rem;
+   } */
     /* navigation */
    .nav-bar{
       flex-direction: column;
@@ -468,6 +478,7 @@ border-bottom: 1px solid var(--primary-btn);
    font-size: 1.2rem;
    margin: 1rem 0;
    }
+   /* font sizes */
    h1{
       font-size: 1.5rem;
    }
@@ -478,19 +489,12 @@ border-bottom: 1px solid var(--primary-btn);
       font-size: 1rem;
    }
    /* about section */
-   #about p{
-      width: 100%;
-   }
    .about-intro{
-      padding: 0 2rem;
+      padding: 0 1rem;
    }
-   .aside-box {
-      width: 100vw;
-      padding: 2rem;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-   }
+   .aside-container {
+      grid-template-columns: 1fr;
+  }
    .aside-box h3{
       font-size: 1.3rem;
       margin: 1rem;
@@ -550,8 +554,6 @@ border-bottom: 1px solid var(--primary-btn);
    /* footer */
    .footer-socials{
       display: block;
-      width: 100vw;
-      height: 60vh;
    }
    /* service */
    .services-container,
@@ -568,6 +570,22 @@ border-bottom: 1px solid var(--primary-btn);
    }
    .scroll-box{
       display: none;
+      padding: 0 2rem;
+   }
+   .services-text{
+      width: 100%;
+      padding: 0 2rem;
+   }
+   .project-text{
+      width: 100%;
+      padding: 0 2rem;
+   }
+   .about-text{
+      width: 100%;
+      padding: 0 2rem;
+   }
+   .srv-box{
+      padding: 0 2rem;
    }
 }
 

@@ -116,14 +116,11 @@ h5{
 .welcome h1{
    font-size: 5rem;
    margin: 0;
-   animation: slide-right linear forwards;
-   animation-timeline: view();
 }
 .welcome p{
    font-size: 1.5rem;
    color: var(--secondary-text-color);
-   animation: slide-right linear forwards;
-   animation-timeline: view();
+
 }
 .skills-p{
    font-size: 1.5rem;
@@ -194,9 +191,9 @@ h5{
    display: flex;
    justify-content: center;
    align-items: center;
+   text-align: center;
    gap: 4rem;
    margin-top: 2rem;
-   color: #111;
 }
 .btn-hire{
    background: transparent;
@@ -209,6 +206,7 @@ h5{
 
 .btn-cv{
    background-color: #111;
+   color: #eee !important;
    font-size: 1rem;
    padding: 1rem;
    width: 15rem;
@@ -272,12 +270,13 @@ h5{
    gap: 20px;
 }
 .project-box{
+   display: flex;
+   justify-content: center;
+   align-items: center;
    width: 35vw;
-   height: 70vh;
+   height: 50vh;
    background-color: #a5a5a5;
-   animation: slide-up linear both;
-   animation-timeline: view();
-   animation-range: entry -100px;
+   color: #eee;
 }
 
 /* services section */
@@ -331,6 +330,7 @@ h5{
 }
 .contact-container{
    margin: 2rem;
+   width: 60%;
 }
 .contact-form{
    display: flex;
@@ -346,6 +346,7 @@ input{
    height: 5vh;
    margin: 1rem;
    padding: 0.5rem;
+   user-select: none;
    outline: none;
    border: none;
    border-bottom: 1px solid #eee;
@@ -425,9 +426,6 @@ border-bottom: 1px solid var(--primary-btn);
 /* global media query  */
 @media screen and (max-width: 768px) {
     /* Styles for phones in portrait mode */
-   /* section{
-      padding: 0 2rem;
-   } */
     /* navigation */
    .nav-bar{
       flex-direction: column;
@@ -578,11 +576,14 @@ border-bottom: 1px solid var(--primary-btn);
    }
    .project-text{
       width: 100%;
-      padding: 0 2rem;
+      padding: 0 1rem;
    }
    .about-text{
       width: 100%;
-      padding: 0 2rem;
+      padding: 0 0.5rem;
+   }
+   .about-text p{
+      text-align: start;
    }
    .srv-box{
       padding: 0 2rem;

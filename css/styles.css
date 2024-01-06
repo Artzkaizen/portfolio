@@ -193,8 +193,10 @@ h5{
    align-items: center;
    text-align: center;
    gap: 4rem;
+   width: 40rem;
    margin-top: 2rem;
 }
+
 .btn-hire{
    background: transparent;
    border: 2px solid black;
@@ -202,6 +204,7 @@ h5{
    font-weight: 700;
    padding: 1rem;
    width: 15rem;
+
 }
 
 .btn-cv{
@@ -212,7 +215,7 @@ h5{
    width: 15rem;
    border: 2px solid black;
 }
-.btn-hire:hover{
+.box1:hover{
    border-color: var(--primary-btn);
    color: var(--primary-btn);
    transition: 0.3s ease-in-out;
@@ -338,6 +341,14 @@ h5{
    align-items: center;
    flex-direction: column;
 }
+#success-msg{
+   display: none;
+   margin: 1rem 0;
+   color: var(--secondary-text-color);
+}
+.success-msg-on{
+   display: block;
+}
 input{
    background-color: #111;
    color: #eee;
@@ -376,6 +387,10 @@ border-bottom: 1px solid var(--primary-btn);
    padding: 0.2rem;
    border: none;
    border-radius: 3px;
+}
+.btn-submit:hover{
+   opacity: 0.9;
+   cursor: pointer;
 }
 /* scroll to top btn */
 .btn-scroll{

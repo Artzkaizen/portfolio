@@ -20,7 +20,6 @@ const navBarLinks = document.getElementsByClassName('list')[0];
 const hamburgerMenu = document.getElementsByClassName('toggle')[0];
 
 toggleButton.addEventListener('click', () => {
-    console.log("success");
     navBarLinks.classList.toggle('active');
     hamburgerMenu.classList.toggle('active');
 });
@@ -51,12 +50,31 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 // form validation
 
+// grab elements
 const form = document.querySelector('form');
-const nameInput = document.querySelector('input[name = "name"]');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const subjectInput = document.getElementById('subject');
+const messageInput = document.getElementById('message');
+const successMsg = document.getElementById('success-msg');
 
-form.addEventListener('submit', function(event) {
-  event.preventDefault();
-  console.log("sucess now");
+// add an event listener
+document.addEventListener("DOMContentLoaded", function() {
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
 
-})
-console.log(nameInput);
+        // create an object to store values
+        const saveMessage = {
+            name: nameInput.value,
+            email: emailInput.value,
+            subject: subjectInput.value,
+            message: messageInput.value
+        };
+
+        // display success message
+        successMsg.classList.remove('')
+        successMsg.classList.add('success-msg-on');
+
+        console.log(saveMessage);
+    });
+});

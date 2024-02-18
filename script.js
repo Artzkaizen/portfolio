@@ -1,7 +1,6 @@
 // Checks to see if the desired section is in frame then add the style or removes
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        console.log(entry)
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
         } else {
@@ -48,9 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
 });
-// form validation
 
-// grab elements
+// form validation
 const form = document.querySelector('form');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
@@ -62,7 +60,8 @@ function getValue(id) {
     return document.getElementById('id').value;
 }
 
-// add an event listener
+
+// wip move to a sever 
 document.addEventListener("DOMContentLoaded", function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -84,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(response => response.json())
         .then(data => {
-            console.log(data.message);
             // Display and remove success message after 5secs
             successMsg.style.display = 'block'
             setTimeout(() => {
@@ -95,11 +93,27 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error("Error:", error);
             // Handle the error (display an error message, etc.)
         });
-
-        
-
         // clear form
         form.reset();
         
     });       
 });
+
+
+// const projectBox = document.querySelectorAll('.project-box');
+// const projectBoxDisplay = document.querySelector('.p-box')
+
+// projectBox.forEach((box) => {
+//     box.addEventListener('click', () => {
+//         projectBoxDisplay.style.display = 'flex';
+//         projectBoxDisplay.innerHTML  = box.innerHTML;
+//         console.log(box);
+//         console.log(box.parentNode);
+//     })
+// })
+
+// projectBoxDisplay.addEventListener('click', () => {
+//     console.log('box clicked');
+//     projectBoxDisplay.style.display = 'none';
+//     console.log(projectBoxDisplay.parentNode);
+// })

@@ -4,7 +4,7 @@
 
     <!-- Basic page needs -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
     <title>My Portfolio</title>
 
     <!-- CSS -->
@@ -36,7 +36,7 @@
             </ul>
 
             <ul class="nav-socials">
-                <li><a href="https://github.com/Artzkaizen" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://github.com/Artzkaizen" ><i class="fa-brands fa-github"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/chukwuka-ezerioha-a0b27b2a1/ " target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
                 <li><a href="#instagram"><i class="fa-brands fa-instagram"></i></a></li>
             </ul>
@@ -108,6 +108,11 @@
                 <a class="btn-hire" href="#contact">HIRE ME</a>
                 <a class="btn-cv" href="./img /cv.pdf">DOWNLOAD CV</a>
             </div>
+
+            <!-- skills lable wip -->
+            <!-- <div class="skills-label">
+
+            </div> -->
         </section>
         <!-- section for personal projects -->
         <section id="projects">
@@ -117,14 +122,21 @@
                 <p>Here are a few projects that showcase my skills and capabilities</p>
             </div>
             <div class="project-container">
-                <div class="project-box hidden">
-                    <h1>Coming soon..</h1>
+                <div id="project-box-1" class="project-box hidden">
+                    <a class="project-box" href="https://jace-weather-app.onrender.com/" target="_blank">
+                        <img src="img /sky-view.png" alt="" srcset="">
+                        <h1>Sky View</h1>
+                    </a>
                 </div>
-                <div class="project-box ">
-                    <h1>Coming soon..</h1>
+                <div id="project-box-2" class="project-box">
+                    <a class="project-box" href="#sdf" >
+                        <h1>Coming soon..</h1>
+                    </a>
                 </div>
-                <div class="project-box ">
-                    <h1>Coming soon..</h1>
+                <div id="project-box-3" class="project-box ">
+                    <a class="project-box" href="#wesdf" >
+                        <h1>Coming soon..</h1>
+                    </a>
                 </div>
                 <div class="project-box sld-right">
                     <h1>Coming soon..</h1>
@@ -135,8 +147,13 @@
                 <div class="project-box ">
                     <h1>Coming soon..</h1>
                 </div>
+                <!-- <div class="p-box"></div> -->
             </div>    
         </section>
+        
+
+        <div class="p-box">
+        </div>
 
         <!-- services section -->
         <section id="services" >
@@ -146,32 +163,42 @@
                 <p class="hidden" >I am deeply passionate about crafting seamless online experiences in addition to that I bring a fresh perspective to problem-solving and am always eager to embrace new technologies and methodologies.
                     I thrive in collaborative environments and believe in the power of teamwork.</p>
             </div>
-            <div class="services-container hidden">
-                <div class="srv-box hidden">
-                    <div class="srv-box-icon">
-                        <i class="fa-solid fa-code"></i>
+            
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        
+                        <div id="slide-1" class="">
+                            <span class="srv-box-icon">
+                                <i class="fa-solid fa-code"></i>
+                            </span>
+                            <h4>Web Development</h4>
+                            <p>I am a dedicated web developer passionate about crafting robust, efficient, and user-centric web solutions. I've honed my skills in front-end technologies to create dynamic and impactful digital experiences.</p>
+                        </div>
+                        <div id="slide-2">
+                            <span class="srv-box-icon">
+                                <i class="fa-solid fa-paintbrush"></i>
+                            </span>
+                            <h4>Web design</h4>
+                            <p>As a passionate web designer, I thrive on transforming ideas into visually stunning and engaging websites. With a keen eye for aesthetics and a deep understanding of user experience, I aim to create digital spaces that leave a lasting impression.</p>
+                        </div>
+                        <div id="slide-3" class="">
+                            <span class="srv-box-icon">
+                                <i class="fa-solid fa-circle-nodes"></i>
+                            </span>
+                            <h4>UI/UX</h4>
+                            <p>Great User Design and experience although most often neglected in my opinion is paramount to the success of your business/product with a passion for crafting digital experiences. I strive to redefine how users engage with digital products.</p>
+                        </div>
                     </div>
-                    <h4>Web Development</h4>
-                    <p>I am a dedicated web developer passionate about crafting robust, efficient, and user-centric web solutions. I've honed my skills in front-end technologies to create dynamic and impactful digital experiences.</p>
-                </div>
-
-                <div class="srv-box">
-                    <div class="srv-box-icon">
-                        <i class="fa-solid fa-paintbrush"></i>
+                
+                    <div class="slider-nav">
+                        <a href="#slide-1"></a>
+                        <a href="#slide-2"></a>
+                        <a href="#slide-3"></a>
                     </div>
-                    <h4>Web design</h4>
-                    <p>As a passionate web designer, I thrive on transforming ideas into visually stunning and engaging websites. With a keen eye for aesthetics and a deep understanding of user experience, I aim to create digital spaces that leave a lasting impression.</p>
                 </div>
-
-                <div class="srv-box hidden">
-                    <div class="srv-box-icon">
-                        <i class="fa-solid fa-circle-nodes"></i>
-                    </div>
-                    <h4>UI/UX</h4>
-                    <p>Great User Design and experience although most often neglected in my opinion is paramount to the success of your business/product with a passion for crafting digital experiences. I strive to redefine how users engage with digital products.</p>
-                </div>
-            </div>
         </section>
+
+        <!-- Contact section -->
         <section id="contact">
             <div class="contact-container">
                 <h5>CONTACT</h5>
@@ -191,6 +218,7 @@
         </section>
     </main>
 </body>
+
 <!-- scroll to top button -->
 <footer>
     <div class="footer-socials">
